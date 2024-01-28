@@ -9,8 +9,8 @@ from discord.ext import commands
 # Arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--token', type=str, help='discord token', default=None)
-parser.add_argument('--print-guilds-info', action='store_true')
 parser.add_argument('--command-prefix', type=str, help='command prefix', default='!')
+parser.add_argument('--print-guilds-info', action='store_true')
 args = parser.parse_args()
 
 if args.token is not None:
