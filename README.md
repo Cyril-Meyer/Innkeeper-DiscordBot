@@ -15,6 +15,20 @@ pip install discord.py==1.7.3
 Be sure to have given all rights to your bot, including:
 ![image](https://github.com/Cyril-Meyer/Innkeeper-DiscordBot/assets/69190238/e09cd42f-cdd8-4fff-acc9-9a015ecde342)
 
+**run with docker**
+```
+# build
+docker build -t innkeeperdiscordbot .
+# run
+docker run --rm -it -d -v $(pwd):/usr/src/app --name innkeeperdiscordbot-container innkeeperdiscordbot python main.py
+# logs
+docker logs -f innkeeperdiscordbot-container
+# kill
+docker attach innkeeperdiscordbot-container
+- CTRL+C -
+```
+
+#### Configuration
 
 **config.json**
 ```
