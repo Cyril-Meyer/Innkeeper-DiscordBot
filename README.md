@@ -2,6 +2,21 @@
 Greeting and Chat Discord Bot
 
 ### Usage
+* Create a `token.txt` file and place your Discord bot token inside.
+  * you can also use the `--token` parameter instead.
+* Create `config.json` file and `chatbot.json` like examples in [configuration section](#configuration).
+
+```
+usage: main.py [-h] [--token TOKEN] [--command-prefix COMMAND_PREFIX]
+               [--print-guilds-info]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --token TOKEN         discord token
+  --command-prefix COMMAND_PREFIX
+                        command prefix
+  --print-guilds-info
+```
 
 **setup venv and install dependency**
 ```
