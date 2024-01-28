@@ -73,14 +73,13 @@ async def on_member_join(member):
             except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 print(f"ERROR: L{exc_tb.tb_lineno:4} -", e)
-                await asyncio.sleep(args.refresh)
                 pass
 
 
 async def process_message(message, bot):
     if message.content == 'aubergiste:<debug.simulate.join>':
         await on_member_join(message.author)
-    if message.content.startswith(args.command_prefix):
+    elif message.content.startswith(args.command_prefix):
         cmd = message.content[len(args.command_prefix):]
         if cmd in bot['chat'].keys():
             try:
@@ -88,7 +87,6 @@ async def process_message(message, bot):
             except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 print(f"ERROR: L{exc_tb.tb_lineno:4} -", e)
-                await asyncio.sleep(args.refresh)
                 pass
 
 
