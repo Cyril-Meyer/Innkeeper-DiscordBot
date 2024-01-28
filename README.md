@@ -64,6 +64,7 @@ docker attach innkeeperdiscordbot-container
 ```
 
 **chatbot.json**
+* `hello` is also message for member join.
 ```
 {
   "hello": "Hello !",
