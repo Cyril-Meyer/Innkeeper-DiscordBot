@@ -24,6 +24,7 @@ with open('config.json', 'r') as f:
     config = json.load(f)
 
 intents = discord.Intents.default()
+intents.members = True
 
 client = discord.Client(intents=intents)
 # client = commands.Bot(intents=intents, command_prefix=args.command_prefix)  # only if use commands
